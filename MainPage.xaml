@@ -1,0 +1,144 @@
+﻿<Page
+    x:Class="AlbTaxSalaryCalc.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AlbTaxSalaryCalc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" Margin="0,-1.667,0,1.667">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Albanian Wage Tax Calculator"  Margin="12,0" FontSize="22"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" VerticalAlignment="Top">
+            <TextBox Name="salaryinput" 
+                     Text="0.00L"
+                     TextAlignment="Right"
+                     HorizontalAlignment="Left" 
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top" 
+                     InputScope="Number"
+                     Width="360"
+                     FontSize="22" 
+                     LostFocus="amountTextBox_LostFocus" 
+                     
+                     GotFocus="amountTextBox_GotFocus" Margin="10,10,0,0" Height="39" />
+
+            <Button x:Name="button_calculate" Content="Calculate" HorizontalAlignment="Left" Margin="217,63,0,-63" VerticalAlignment="Top" Click="Button_Click" Height="58" Width="153" RenderTransformOrigin="0.436,0.663" FontSize="22"/>
+        </Grid>
+
+
+        <StackPanel Name="ContentPanel1" Grid.Row="2" VerticalAlignment="Top">
+
+            <Grid x:Name="ContentPanel2" Grid.Row="2" VerticalAlignment="Top">
+
+                <TextBlock HorizontalAlignment="Left" 
+            	TextWrapping="Wrap" 
+            	Text="Progressive Tax:"
+            	FontSize="18"
+            	Margin="15,72,0,-52"
+                   />
+
+                <TextBlock x:Name="progressiveTaxTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,72,34,-52"                       
+                   />
+
+                <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Insurance Tax:"
+                   FontSize="18"
+                   Margin="15,124,0,-104"
+                   />
+
+                <TextBlock x:Name="insuranceTaxTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,124,32,-104"                       
+                   />
+
+                <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Health Tax:"
+                   FontSize="18"
+                   Margin="15,176,0,-156"
+                   />
+
+                <TextBlock x:Name="healthTaxTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,176,33,-156"                       
+                   />
+
+                <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Total Deduction:"
+                   FontSize="18"
+                   Margin="15,228,0,-208"
+                   />
+
+                <TextBlock x:Name="totaldeductionTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,228,33,-208"                       
+                   />
+
+                <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Effective Tax Rate:"
+                   FontSize="18"
+                   Margin="15,280,0,-260"
+                   />
+
+                <TextBlock x:Name="effectiveTaxRateTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,280,33,-260"                       
+                   />
+
+                <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Net Salary:"
+                   FontSize="18"
+                   Margin="15,332,0,-312"
+                   />
+
+                <TextBlock x:Name="netSalaryTextBlock" 
+                   HorizontalAlignment="right" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top"
+                   Text="0.00 L"
+                   FontSize="24" Margin="0,332,33,-312"                       
+                   />
+            </Grid>
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>
